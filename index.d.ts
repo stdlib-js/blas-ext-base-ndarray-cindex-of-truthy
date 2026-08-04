@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,28 +16,35 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { complex64ndarray } from '@stdlib/types/ndarray';
 
 /**
-* Return the index of the first truthy element in a one-dimensional single-precision complex floating-point ndarray.
+* Returns the index of the first truthy element in a one-dimensional single-precision complex floating-point ndarray.
 *
-* @module @stdlib/blas-ext-base-ndarray-cindex-of-truthy
+* ## Notes
+*
+* -   The function expects the following ndarrays:
+*
+*     -   a one-dimensional input ndarray.
+*
+* @param arrays - array-like object containing ndarrays
+* @returns index
 *
 * @example
 * var Complex64Vector = require( '@stdlib/ndarray-vector-complex64' );
-* var cindexOfTruthy = require( '@stdlib/blas-ext-base-ndarray-cindex-of-truthy' );
 *
 * var x = new Complex64Vector( [ 0.0, 0.0, 0.0, 0.0, 3.0, 0.0, 2.0, 0.0 ] );
 *
 * var v = cindexOfTruthy( [ x ] );
 * // returns 2
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function cindexOfTruthy( arrays: [ complex64ndarray ] ): number;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = cindexOfTruthy;
